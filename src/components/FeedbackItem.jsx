@@ -1,8 +1,8 @@
-import {useState} from 'react'
+// import {useState} from 'react'
 
-function FeedbackItem() {
-    const [rating, setRating] = useState(7)
-    const [text, setText] = useState('This is just a test of state in React')
+function FeedbackItem({item}) {
+    // const [rating, setRating] = useState(7)
+    // const [text, setText] = useState('This is just a test of state in React')
     // const handleClick = () => {
     //     setRating( (prev) => {
     //         return prev + 1
@@ -11,8 +11,8 @@ function FeedbackItem() {
 
   return (
     <div className="card">
-        <div className="num-display">{rating}</div>
-        <div className="text-display">{text}</div>
+        <div className="num-display">{item.rating}</div>
+        <div className="text-display">{item.text}</div>
         {/* <button onClick={handleClick}>Click</button> */}
     </div>
   )
