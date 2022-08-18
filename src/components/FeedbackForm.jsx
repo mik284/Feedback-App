@@ -13,11 +13,11 @@ function FeedbackForm() {
         if(text === "") {
             setBtnDisabled(true) // disable button if text is empty
             setMessage(null)
-            } else if(text !== "" && text.trim().length > 0) { // enable button if text is not empty
+            } else if(text !== "" && text.trim().length <= 10) { // enable button if text is not empty
                 setMessage("Text must be atleast 10 characters long") // message is set to null if text is empty
-                setBtnDisabled(false) // Enable the button
+                setBtnDisabled(true) // disable button if text is empty
             } else {
-                setMessage("null") // message is set to null if text is empty
+                setMessage(null) // message is set to null if text is empty
                 setBtnDisabled(false) // Enable the button
             }
 
