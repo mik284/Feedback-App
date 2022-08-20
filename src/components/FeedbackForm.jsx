@@ -4,8 +4,8 @@ import Card from "./shared/Card"
 import Button from "./shared/Button";
 import RatingSelect from "./RatingSelect";
 
-function FeedbackForm() {
-    const [text, setText] = useState("")
+function FeedbackForm({handleAdd}) {
+    const [text, setText] = useState("") 
     const [rating, setRating] = useState(10)// 10 is the default value
     const [btnDisabled, setBtnDisabled] = useState(true) // disable button if text is empty
     const [message, setMessage] = useState("")
@@ -26,11 +26,25 @@ function FeedbackForm() {
         setText(e.target.value) // set the text to the value of the input
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault() // prevent the default behaviour of the form
+        if(text.trim().length > 10){
+            const newFeedback= {
+                text,
+                rating,
+            }
+
+            handleAdd(newFeedback)
+
+            setText('')
+        }
+    }
+
   return (
     <Card>
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2>How would you rate your service with us?</h2>
-            <RatingSelect select={(rating) => console.log(rating)} /> 
+            <RatingSelect select={(rating) => setRating(rating)} /> 
             <div className="input-group">
                 <input onChange={handleTextChange} type="text" placeholder="write a review" value={text}/>
                 <Button type="submit" isDisabled={btnDisabled}>Send</Button>
