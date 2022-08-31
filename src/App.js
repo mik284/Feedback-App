@@ -56,8 +56,8 @@ if(window.confirm('Are you sure you want to delete?')){
                             <Route exact path='/' element={
                                 <>
                                     <FeedbackForm handleAdd={addFeedback} />
-                                    <FeedbackStats feedback={feedback}/>
-                                    <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />   
+                                    <FeedbackStats />
+                                    <FeedbackList handleDelete={deleteFeedback} />   
                                 </>
                             }>
                                 
