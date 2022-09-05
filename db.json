@@ -1,18 +1,18 @@
 {
   "feedback": [
     {
-      "id": 1,
+      "text": "I have worked with different products but yours standout plus the services",
       "rating": 10,
-      "text": "This is feedback item 1 from the backend"
+      "id": 1
     },
     {
-      "id": 2,
+      "text": "Your products are the best ",
       "rating": 6,
-      "text": "This is feedback item 2 from the backend"
+      "id": 2
     },
     {
       "text": "what a nice app mike good work",
-      "rating": "1",
+      "rating": 1,
       "id": 3
     }
   ]
