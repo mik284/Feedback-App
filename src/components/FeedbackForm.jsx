@@ -28,7 +28,7 @@ function FeedbackForm() {
             setBtnDisabled(true) // disable button if text is empty
             setMessage(null)
             } else if(text !== "" && text.trim().length <= 10) { // enable button if text is not empty
-                setMessage("Text must be atleast 10 characters long") // message is set to null if text is empty
+                setMessage("Text must be at least 10 characters long") // message is set to null if text is empty
                 setBtnDisabled(true) // disable button if text is empty
             } else {
                 setMessage(null) // message is set to null if text is empty
@@ -60,7 +60,7 @@ function FeedbackForm() {
   return (
     <Card>
         <form onSubmit={handleSubmit}>
-            <h2>How would you rate your service with us?</h2>
+            <h2>How would you rate our products and services?</h2>
             <RatingSelect select={(rating) => setRating(rating)} /> 
             <div className="input-group">
                 <input onChange={handleTextChange} type="text" placeholder="write a review" value={text}/>
